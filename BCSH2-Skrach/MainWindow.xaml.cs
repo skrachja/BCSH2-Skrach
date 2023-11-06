@@ -24,5 +24,6 @@ namespace BCSH2_Skrach
         {
             InitializeComponent();
         }
+
     }
 }
