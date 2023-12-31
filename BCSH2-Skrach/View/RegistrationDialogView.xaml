@@ -1,0 +1,29 @@
+﻿<Window x:Class="BCSH2_Skrach.View.RegistrationDialogView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BCSH2_Skrach.View"
+        mc:Ignorable="d"
+        Title="RegistrationDialogView" Height="120" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Name:" Grid.Row="0" Grid.Column="0"/>
+        <TextBox Text="{Binding Name}" Grid.Row="0" Grid.Column="1"/>
+
+        <Label Content="Surname:" Grid.Row="1" Grid.Column="0"/>
+        <TextBox Text="{Binding Surname}" Grid.Row="1" Grid.Column="1"/>
+
+        <Button Content="OK" Grid.Row="2" Grid.Column="0" Command="{Binding OkCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+        <Button Content="Cancel" Grid.Row="2" Grid.Column="1" Command="{Binding CancelCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
+    </Grid>
+</Window>

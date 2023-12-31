@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\karlo\source\repos\BCSH2-Skrach\BCSH2-Skrach\App.xaml
-11407045341
+7-237410560
 
-5-184216934
-194408770064
-MainWindow.xaml;
+28735640499
+200-1153409889
+Components\BindablePasswordBox.xaml;View\AddSongToListWindow.xaml;View\AddSongWindow.xaml;View\CreatePlaylistWindow.xaml;View\LoginView.xaml;View\MainWindow.xaml;View\RegistrationDialogView.xaml;
 
 True
 

@@ -1,0 +1,42 @@
+﻿<Window x:Class="BCSH2_Skrach.View.CreatePlaylistWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BCSH2_Skrach.View"
+        mc:Ignorable="d"
+        Title="Create Playlist" 
+        Height="200" 
+        Width="400"
+        MinHeight="200"
+        MinWidth="400">
+    <Grid Background="#202123">
+        <StackPanel>
+            <!-- Playlist Name -->
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150px"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Playlist Name:" Grid.Column="0" Foreground="LightGray" FontSize="12" FontWeight="Bold"/>
+                <TextBox Text="{Binding PlaylistName}" Grid.Column="1" Background="#FF141417" Foreground="White" BorderBrush="white" BorderThickness="1"/>
+            </Grid>
+
+            <!-- Image Selection -->
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150px"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Image:" Grid.Column="0" Foreground="LightGray" FontSize="12" FontWeight="Bold"/>
+                <Button Content="Select Image" Command="{Binding SelectImageCommand}" Grid.Column="1" Background="#FF141417" Foreground="White" BorderBrush="white" BorderThickness="1"/>
+            </Grid>
+
+            <!-- OK Button -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="OK" Width="100px" Margin="00 10" Command="{Binding CreatePlaylistCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}" Background="#FF141417" Foreground="White" BorderBrush="white" BorderThickness="1"/>
+                <Button Content="Cancel" Width="100px" Margin="10 10" Command="{Binding CancelCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}" Background="#FF141417" Foreground="White" BorderBrush="white" BorderThickness="1"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

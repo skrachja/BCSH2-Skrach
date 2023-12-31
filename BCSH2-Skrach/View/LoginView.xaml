@@ -1,0 +1,105 @@
+﻿<Window x:Class="BCSH2_Skrach.LoginView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BCSH2_Skrach" 
+   d:DataContext="{d:DesignInstance Type=local:LoginViewModel}"
+             mc:Ignorable="d" 
+             d:DesignHeight="250" 
+        d:DesignWidth="500"
+        Width="500"
+        Height="300"
+          MinWidth="450"
+  MinHeight="280"
+  MaxWidth="800"
+  MaxHeight="400">
+
+    <Grid Background="#202123">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="241*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <TextBlock Grid.Row="0"
+            HorizontalAlignment="Center"
+            FontSize="48"
+            Foreground="LightGray"
+            Text="Login" Margin="0,10,0,80" Grid.RowSpan="2" />
+
+        <!-- Login Form -->
+        <Grid Grid.Row="1" Margin="0,20,0,60"
+            MaxWidth="400"
+            Grid.IsSharedSizeScope="True" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Username -->
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" SharedSizeGroup="Label" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0" Text="Username" Foreground="LightGray" />
+                <TextBox Grid.Column="1" Margin="10,0,0,0"
+                    Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}" />
+            </Grid>
+
+            <!-- Password -->
+            <Grid Grid.Row="1" Margin="0,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" SharedSizeGroup="Label" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0" Text="Password" Foreground="LightGray" />
+                <local:BindablePasswordBox Grid.Column="1" Margin="10,0,0,0"
+                    Password="{Binding Password, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+            </Grid>
+        </Grid>
+
+        <!-- Submit -->
+
+        <Grid Grid.Row="2" Margin="0,20,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" Margin="0,0,10,0"
+       HorizontalAlignment="Right"
+       Command="{Binding LoginCommand}"
+       Content="Login"
+       Width="100" Height="40"
+       Background="black"
+       Foreground="LightGray"
+       FontSize="16"
+       FontWeight="Bold" />
+
+            <Button Grid.Column="1" Margin="10,0,0,0"
+       HorizontalAlignment="Left"
+       Command="{Binding RegisterCommand}"
+       Content="Register"
+       Width="100" Height="40"
+       Background="black"
+       Foreground="LightGray"
+       FontSize="16"
+       FontWeight="Bold" />
+        </Grid>
+
+
+
+
+
+
+    </Grid>
+</Window>

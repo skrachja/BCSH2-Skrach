@@ -7,7 +7,45 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainWindow.xaml">
+    <Compile Update="Components\BindablePasswordBox.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AddSongToListWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AddSongWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\CreatePlaylistWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\LoginView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\RegistrationDialogView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Components\BindablePasswordBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddSongToListWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddSongWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\CreatePlaylistWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\LoginView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\RegistrationDialogView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
